@@ -1296,6 +1296,12 @@ DisplayError DisplayBase::PrepareRC(LayerStack *layer_stack) {
       rc_stack.layers.push_back(&layer);
     }
 
+    for (auto layer : layer_stack->layers) {
+      if (layer->composition == kCompositionGPUTarget) {
+        break;
+      }
+      rc_stack.layers.push_back(layer);
+    }
     *layer_stack_ptr = &rc_stack;
   }
 

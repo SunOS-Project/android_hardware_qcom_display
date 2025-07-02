@@ -119,12 +119,13 @@ case "$target" in
     ;;
     "volcano")
     case "$soc_hwid" in
-      636|640|641|657|658)
+      636|640|641|657|658|712)
         # SOC ID for Volcano is 636
         # SOC ID for Volcano is 640
         # SOC ID for Volcano IOT is 657
         # SOC ID for Volcano IOT is 658
         # SOC ID for Volcano APQ is 641
+        # SOC ID for Volcano is 712
         setprop vendor.display.enable_fb_scaling 0
         setprop vendor.gralloc.use_dma_buf_heaps 1
         setprop vendor.display.target.version 5
