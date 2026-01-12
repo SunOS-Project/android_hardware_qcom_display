@@ -247,7 +247,8 @@ case "$target" in
         554)
             setprop vendor.display.enable_null_display 1
         ;;
-        579)
+        579|740)
+            # SOC ID for Aliso is 740
             setprop vendor.gralloc.use_dma_buf_heaps 1
             setprop vendor.display.enable_posted_start_dyn 2
             setprop vendor.display.enable_allow_idle_fallback 1
